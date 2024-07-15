@@ -81,9 +81,10 @@ onMounted(() => {
         <div class="row">
           <div class="col-3 d-flex flex-column justify-content-start">
 
-            <button @click="buyClickUpgrade('Bee')" class="btn btn-warning my-3"><span id="beePrice">50</span> <i
-                class="mdi mdi-flower-pollen"></i></button>
-            <button @click="buyClickUpgrade('Hive')" class="btn btn-warning my-3"><span id="hivePrice">250</span>
+            <button :disabled="AppState.pollen <= 50" @click="buyClickUpgrade('Bee')" class="btn btn-warning my-3"><span
+                id="beePrice">50</span> <i class="mdi mdi-flower-pollen"></i></button>
+            <button :disabled="AppState.pollen <= 250" @click="buyClickUpgrade('Hive')"
+              class="btn btn-warning my-3"><span id="hivePrice">250</span>
               <i class="mdi mdi-flower-pollen"></i></button>
           </div>
           <div class="col-3">
@@ -91,9 +92,11 @@ onMounted(() => {
             <p class="py-3">Hive +5<i class="mdi mdi-beehive-outline"></i></p>
           </div>
           <div class="col-3 d-flex flex-column">
-            <button @click="buyAutoUpgrade('Superbee')" class="btn btn-danger my-3"><span id="superbeePrice">1k</span>
+            <button :disabled="AppState.pollen <= 1000" @click="buyAutoUpgrade('Superbee')"
+              class="btn btn-danger my-3"><span id="superbeePrice">1k</span>
               <i class="mdi mdi-flower-pollen"></i></button>
-            <button @click="buyAutoUpgrade('Queenbee')" class="btn btn-danger my-3"><span id="queenbeePrice">5k</span>
+            <button :disabled="AppState.pollen <= 5000" @click="buyAutoUpgrade('Queenbee')"
+              class="btn btn-danger my-3"><span id="queenbeePrice">5k</span>
               <i class="mdi mdi-flower-pollen"></i></button>
           </div>
           <div class="col-3 d-flex flex-column justify-content-around">
