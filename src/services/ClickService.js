@@ -12,6 +12,7 @@ class ClickService {
         const foundUpgrade = AppState.clickUpgrades.find((upgrade) => upgrade.name == upgradeName)
         if (AppState.pollen >= foundUpgrade.price) {
             AppState.clickPower += foundUpgrade.clickPower
+            foundUpgrade.quantity++
             console.log(upgradeName, AppState.clickPower);
             AppState.pollen -= foundUpgrade.price
         }

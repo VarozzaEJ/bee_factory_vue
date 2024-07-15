@@ -6,7 +6,7 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <header>
+  <header class="bg-smokey">
     <Navbar />
   </header>
   <main>

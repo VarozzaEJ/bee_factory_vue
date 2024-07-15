@@ -13,8 +13,19 @@ body {
   background-color: var(--bs-page);
 }
 
+.bg-smokey{
+  background-color: rgba(44, 44, 44, 0.497);
+  backdrop-filter: blur(25px);
+}
+
 main {
   flex-grow: 1;
+}
+main {
+  flex-grow: 1;
+  background-image: url(https://images.unsplash.com/photo-1461342249744-29a57e9bd1cb?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
 }
 
 a {
@@ -27,9 +38,7 @@ a {
     font-style: normal;
 }
 
-.bg-image {
-    background-image: url(https://images.unsplash.com/photo-1461342249744-29a57e9bd1cb?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
+
 
 .flower-img {
     height: 40dvh;
